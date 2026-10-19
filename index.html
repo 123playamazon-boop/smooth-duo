@@ -4,6 +4,22 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
+<!-- ===== A/B splitter (same ad link): 50% stay on this quiz, 50% go to the DTC page. Sticky per visitor, carries rtkcid/UTM. Runs before any pixel so variant B never double-fires. ?ab=a / ?ab=b forces a side for QA. ===== -->
+<script>
+(function(){try{
+  var path=location.pathname.replace(/\/index\.html$/,'/');
+  if(path!=="/") return;                 // only split the root entry
+  var params=new URLSearchParams(location.search);
+  var forced=(params.get('ab')||'').toLowerCase();
+  var v;
+  if(forced==='a'||forced==='b'){ v=forced; }
+  else{
+    try{ v=localStorage.getItem('duo_ab'); }catch(e){ v=null; }
+    if(v!=='a'&&v!=='b'){ v=(Math.random()<0.5)?'a':'b'; try{localStorage.setItem('duo_ab',v);}catch(e){} }
+  }
+  if(v==='b'){ params.delete('ab'); var qs=params.toString(); location.replace('/dtc.html'+(qs?('?'+qs):'')); }
+}catch(e){}})();
+</script>
 <title>Brazilian Frizz & Shine Quiz — Build Your 2-Step Smoothing Ritual</title>
 <meta name="description" content="Answer a few quick questions and build your at-home Brazilian 2-step anti-frizz & shine ritual. Takes under 3 minutes.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
