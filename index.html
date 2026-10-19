@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Brazilian Frizz & Shine Quiz — Build Your 2-Step Smoothing Ritual</title>
+<meta name="description" content="Answer a few quick questions and build your at-home Brazilian 2-step anti-frizz & shine ritual. Takes under 3 minutes.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800;900&family=Inter:wght@400;500;600;700;800&family=Pacifico&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#231509; --muted:#8a7a63; --cream:#fbf6ef; --card:#ffffff;
+  --green:#c9801e; --greenD:#9a5a12; --gold:#9a5a12; --goldD:#7a4610;
+  --line:#efe4d4; --soft:#f6eee2; --red:#c0392b;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,system-ui,-apple-system,sans-serif;color:var(--ink);background:var(--cream);line-height:1.5;-webkit-font-smoothing:antialiased}
+.wrap{max-width:560px;margin:0 auto;padding:0 16px 120px}
+.topbar{position:sticky;top:0;z-index:30;background:rgba(251,246,239,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.topbar .in{max-width:560px;margin:0 auto;padding:10px 16px 12px}
+.brandrow{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}
+.brand{font-family:Archivo;font-weight:900;letter-spacing:.3px;font-size:16px;color:var(--green);display:flex;align-items:center;pointer-events:none;cursor:default}
+.brand .logo{height:42px;width:42px;display:block}
+.brand .wordmark{display:none}
+.pagefoot{text-align:center;margin-top:28px;padding-top:20px;border-top:1px solid var(--line)}
+.pagefoot .logo{width:72px;height:72px;display:inline-block;pointer-events:none}
+.pagefoot .fb{font-family:Archivo;font-weight:900;font-size:15px;color:var(--ink);margin-top:8px}
+.pagefoot .fine{font-size:11px;color:var(--muted);margin-top:4px}
+.badge{font-size:11px;font-weight:800;color:var(--greenD);background:#f7ead3;border:1px solid #ecd3a6;border-radius:999px;padding:4px 10px}
+.prog{height:8px;background:#f0e2cd;border-radius:999px;overflow:hidden}
+.prog i{display:block;height:100%;width:6%;background:linear-gradient(90deg,var(--gold),var(--green));transition:width .4s ease}
+.earn{display:flex;align-items:baseline;gap:6px;margin-top:8px}
+.earn small{font-size:11px;font-weight:800;color:var(--muted);text-transform:uppercase;letter-spacing:.4px}
+.earn b{font-family:Archivo;font-weight:900;color:var(--gold);font-size:20px}
+.tier{margin-left:auto;font-size:12px;font-weight:800;color:var(--green);background:#f7ead3;border:1px solid #ecd3a6;border-radius:999px;padding:3px 10px}
+.screen{padding-top:22px}
+.eyebrow{font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.6px;color:var(--gold)}
+h1.q{font-family:Archivo;font-weight:900;font-size:27px;line-height:1.18;margin-top:4px}
+.center{text-align:center}
+.lede{color:#4a3c2a;font-size:16px;margin-top:12px}
+.hl{background:linear-gradient(transparent 60%,#f3dcae 60%);padding:0 2px}
+.hlg{color:var(--green);font-weight:800}
+.hlr{color:var(--red);font-weight:800}
+.hero-img{width:100%;border-radius:16px;margin-top:16px;display:block;border:1px solid var(--line)}
+.note{color:#4a3c2a;font-size:14px;margin-top:14px;background:var(--soft);border:1px solid var(--line);border-radius:14px;padding:14px 16px}
+.opts{margin-top:20px;display:flex;flex-direction:column;gap:10px}
+.opt{display:flex;align-items:center;gap:12px;background:var(--card);border:1.5px solid var(--line);border-radius:14px;padding:15px 16px;font-size:15.5px;font-weight:600;cursor:pointer;transition:.15s;text-align:left;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+@media(hover:hover){.opt:hover{border-color:var(--green);background:#fdf5e8;transform:translateY(-1px)}}
+.opt:active{border-color:var(--green);background:#fdf5e8}
+.opt .dot{width:20px;height:20px;border-radius:50%;border:2px solid #d8c4a4;flex:none}
+.reward{display:flex;align-items:center;gap:12px;background:#fdf3e2;border:1.5px solid #ecd3a6;border-radius:15px;padding:14px 16px;margin-top:20px}
+.reward .emo{font-size:26px}
+.reward b{display:block;font-size:15px}
+.reward small{color:var(--goldD);font-weight:800}
+.field{margin-top:20px}
+.field label{display:block;font-size:13px;font-weight:700;color:var(--muted);margin-bottom:6px}
+.field input{width:100%;border:1.5px solid var(--line);border-radius:14px;padding:15px 16px;font-size:16px;font-family:inherit;background:#fff}
+.field input:focus{outline:none;border-color:var(--green)}
+.tiles{margin-top:18px;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.tile{background:var(--card);border:1.5px solid var(--line);border-radius:14px;padding:14px}
+.tile .te{font-size:22px}
+.tile b{display:block;font-size:14px;margin-top:6px}
+.tile p{font-size:12.5px;color:var(--muted);margin-top:3px}
+.load{text-align:center;padding:40px 0}
+.spin{width:46px;height:46px;border:4px solid #f0e2cd;border-top-color:var(--green);border-radius:50%;margin:0 auto 18px;animation:sp 1s linear infinite}
+@keyframes sp{to{transform:rotate(360deg)}}
+.loadbar{height:8px;background:#f0e2cd;border-radius:999px;overflow:hidden;max-width:260px;margin:14px auto 0}
+.loadbar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--gold),var(--green));animation:fill 3.3s ease forwards}
+@keyframes fill{to{width:100%}}
+.sub{color:var(--muted);font-size:14px}
+.offerline{margin:14px auto 2px;max-width:520px;text-align:center;background:#fdf3e2;border:2px solid #ecd3a6;border-radius:16px;padding:14px 16px}
+.offerline .ol-top{font-size:15px;color:#231509;line-height:1.35}
+.offerline .ol-price{font-family:Archivo;font-weight:900;font-size:42px;color:var(--green);line-height:1.05;margin:4px 0}
+.offerline .ol-sub{color:var(--muted);font-size:12.5px;font-weight:700}
+.ugc{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
+.ugc figure{margin:0}
+.ugc img{width:100%;border-radius:14px;display:block;border:1px solid var(--line)}
+.ugc figcaption{font-size:12px;color:var(--muted);text-align:center;margin-top:5px;font-weight:600}
+.steps{margin-top:14px;display:flex;flex-direction:column;gap:10px}
+.step{display:flex;gap:12px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px}
+.step .n{flex:none;width:28px;height:28px;border-radius:50%;background:var(--green);color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:14px}
+.step b{font-size:15px}
+.step p{font-size:13.5px;color:#4a3c2a;margin-top:2px}
+.gifts{margin-top:16px;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px}
+.gifts h3{font-family:Archivo;font-size:17px;margin-bottom:10px}
+.gline{display:flex;align-items:center;gap:12px;padding:10px 0;border-top:1px dashed var(--line)}
+.gline:first-of-type{border-top:none}
+.gline .ge{font-size:22px;flex:none}
+.gline b{font-size:14.5px;display:block}
+.gline p{font-size:12.5px;color:var(--muted);margin-top:1px}
+.gline .gv{margin-left:auto;font-weight:800;color:var(--muted);text-decoration:line-through;font-size:13px;white-space:nowrap}
+.gline.totalv{border-top:2px solid var(--line);margin-top:4px}
+.gline.totalv .totalp{color:var(--ink);text-decoration:none;font-family:Archivo;font-size:16px}
+.pricebox{margin-top:16px;text-align:center;background:#fdf3e2;border:2px solid #ecd3a6;border-radius:18px;padding:20px 16px}
+.pricebox .from{color:var(--muted);text-decoration:line-through;font-weight:700}
+.pricebox .now{font-family:Archivo;font-weight:900;font-size:46px;color:var(--green);line-height:1}
+.pricebox .once{color:var(--muted);font-size:13px;margin-top:2px}
+.kitsel{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:16px}
+.kitopt{position:relative;border:2px solid var(--line);background:var(--card);border-radius:14px;padding:14px 12px 12px;cursor:pointer;text-align:center;transition:.15s;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+.kitopt.sel{border-color:var(--green);background:#fdf3e2;box-shadow:0 6px 16px rgba(201,128,30,.18)}
+.kitopt .kt{font-family:Archivo;font-weight:900;font-size:15px;color:var(--ink)}
+.kitopt .kp{font-family:Archivo;font-weight:900;font-size:22px;color:var(--green);margin-top:4px}
+.kitopt .ks{font-size:11.5px;color:var(--muted);margin-top:2px;line-height:1.3}
+.kitopt .ktag{position:absolute;top:-10px;left:50%;transform:translateX(-50%);background:#c0392b;color:#fff;font-size:10px;font-weight:800;padding:3px 9px;border-radius:999px;white-space:nowrap}
+.guar{display:flex;gap:14px;align-items:flex-start;background:#fdf3e2;border:1.5px solid #ecd3a6;border-radius:16px;padding:16px;margin-top:16px}
+.guar b{font-size:15px}.guar p{font-size:13px;color:#4a3c2a;margin-top:4px}
+.sealrow{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:14px}
+.seal{font-size:12px;font-weight:700;color:var(--greenD);background:#f7ead3;border:1px solid #ecd3a6;border-radius:999px;padding:6px 12px}
+.rvw{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px;margin-top:12px}
+.rvw .rtop{display:flex;align-items:center;gap:10px}
+.rvw .av{width:36px;height:36px;border-radius:50%;background:linear-gradient(180deg,var(--green),var(--greenD));color:#fff;font-weight:800;font-family:Archivo;display:flex;align-items:center;justify-content:center;flex:none;font-size:15px}
+.rvw .nm{font-weight:800;font-size:14px;color:var(--ink)}
+.rvw .stars{color:#ff9a1e;font-size:14px;letter-spacing:1px;margin-top:8px}
+.rvw .rt{font-weight:800;font-size:14.5px;color:var(--ink);margin:2px 0 6px}
+.rvw .rb{font-size:13.5px;color:#4a3c2a;line-height:1.55}
+.rvw .vp{display:inline-block;font-size:11px;font-weight:800;color:#157347;margin-top:10px}
+.rvw .src{font-size:11px;color:var(--muted);margin-top:2px}
+.faq{margin-top:12px}
+.faq details{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:0 14px;margin-bottom:8px}
+.faq summary{cursor:pointer;font-weight:700;font-size:14.5px;padding:14px 0;list-style:none}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";float:right;color:var(--gold);font-weight:900}
+.faq details[open] summary::after{content:"\2212"}
+.faq p{font-size:13.5px;color:#4a3c2a;padding:0 0 14px}
+.disc{font-size:11px;color:var(--muted);margin-top:18px;line-height:1.5;border-top:1px solid var(--line);padding-top:14px}
+.ctawrap{position:fixed;left:0;right:0;bottom:0;z-index:40;background:linear-gradient(180deg,rgba(251,246,239,0),var(--cream) 34%);padding:14px 16px calc(14px + env(safe-area-inset-bottom))}
+.ctawrap.inl{position:static;left:auto;right:auto;bottom:auto;z-index:auto;background:none;padding:22px 0 0}
+body.inl-mode .wrap{padding-bottom:28px}
+.ctawrap .in{max-width:560px;margin:0 auto}
+.cta{display:block;width:100%;border:none;border-radius:16px;background:linear-gradient(180deg,#e0952a,var(--greenD));color:#fff;font-family:Archivo;font-weight:900;font-size:18px;padding:18px;cursor:pointer;box-shadow:0 10px 24px rgba(201,128,30,.3);touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+.cta:active{transform:translateY(1px)}
+.cnote{text-align:center;font-size:12px;color:var(--muted);margin-top:8px;font-weight:600}
+.urg{text-align:center;font-size:12px;font-weight:800;color:var(--red);margin-top:4px}
+</style>
+</head>
+<body>
+<div class="topbar"><div class="in">
+  <div class="brandrow">
+    <div class="brand">
+      <svg class="logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="It's Brazilian">
+        <defs><radialGradient id="ibg" cx="50%" cy="8%" r="95%">
+          <stop offset="0%" stop-color="#ffd21a"/><stop offset="50%" stop-color="#ff9a1e"/><stop offset="100%" stop-color="#ff5a1e"/>
+        </radialGradient></defs>
+        <circle cx="50" cy="50" r="50" fill="url(#ibg)"/>
+        <text x="50" y="43" text-anchor="middle" font-family="Pacifico, cursive" font-size="21" fill="#fff">It's</text>
+        <text x="50" y="70" text-anchor="middle" font-family="Pacifico, cursive" font-size="19" fill="#fff">Brazilian</text>
+      </svg>
+    </div>
+    <div class="badge">★ Salon shine at home</div>
+  </div>
+  <div class="prog"><i id="pfill"></i></div>
+  <div class="earn"><small>Bonuses unlocked</small><b id="enum">$0</b><span class="tier" id="tier">Frizz Fighter</span></div>
+</div></div>
+
+<div class="wrap"><div id="screen" class="screen"></div>
+<div class="ctawrap" id="ctawrap" style="display:none"><div class="in">
+  <button class="cta" id="ctaBtn">Continue →</button>
+  <div class="cnote" id="cnote">⏱️ Takes less than 3 minutes</div>
+</div></div>
+</div>
+
+<!-- ================= TRACKING ================= -->
+<script>
+/* Meta Pixel */
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+try{ fbq('init','2395211664620778'); fbq('track','PageView'); }catch(e){}
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=2395211664620778&ev=PageView&noscript=1"/></noscript>
+<!-- Microsoft Clarity -->
+<script type="text/javascript">
+(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","CLARITY_ID");
+</script>
+<!-- RedTrack: capture rtkcid from the URL so it rides into the Shopify order -->
+<script>
+(function(){try{
+  var p=new URLSearchParams(location.search);
+  var rtk=p.get('rtkcid')||p.get('clickid')||'';
+  if(rtk){ try{localStorage.setItem('rtkcid',rtk);}catch(e){} }
+  window.__rtkcid = rtk || (function(){try{return localStorage.getItem('rtkcid')||'';}catch(e){return'';}})();
+}catch(e){}})();
+</script>
+
+<script>
+/* ================= CONFIG ================= */
+var CHECKOUT_URL = "https://pay.seeseofficial.shop/cart/53980926542113:1";
+var CART_BASE    = "https://pay.seeseofficial.shop/cart/";
+var MAIN_VARIANT = "53980926542113";
+/* 2-pack bundle — Shopify discount code (15% off, min 2) */
+var KIT2_CODE    = "SMOOTHDUO2";
+var KIT2_OFF     = 0.15;
+var PRICE        = "49.99";
+var PRICE_FROM   = "148"; // stacked value anchor (leave-in $39 + serum $49 + $60 bonuses)
+var SALON        = "300"; // typical US salon smoothing/gloss price (anchor)
+
+/* ================= QUIZ DATA ================= */
+var STEPS = [
+ {k:"intro",eyebrow:"It’s Brazilian · The 2-Step Smooth Ritual",
+  h:'The Brazilian 2-step ritual for <span class="hlg">frizz-free, glass-shine hair</span> — <span class="hlg">humidity-proof</span>, for every hair type, <span class="hlr">without a $300 salon visit</span>.',
+  img:"duo-hero.webp",
+  lede:'Here’s what no salon tells you: frizz isn’t your hair misbehaving — it’s hair that was never <b>sealed</b>. The <b>It’s Brazilian Smooth Duo</b> does it in two moves: a weightless <b>Vitamin-E leave-in</b> that shields and smooths on damp hair, then a few drops of <b>organic argan + Brazilian açaí serum</b> that lock in a soft, glossy, non-greasy finish. Salon shine, at your bathroom sink — in under 60 seconds. Answer a few quick questions and build your personalized ritual — and unlock the bonuses that come with your duo.',
+  note:"How it works: answer below in under 3 minutes. Each answer unlocks a free bonus guide that comes with your duo and builds your plan at the end.",
+  cta:"Build my ritual"},
+
+ {k:"form",h:"What name should we put on your plan?",label:"Your first name",cta:"Continue"},
+ {k:"reward",emo:"🎁",title:"Personalized Shine Plan reserved",val:19},
+
+ {k:"q",h:"{name}, how would you describe your hair?",
+  opts:["Curly / coily and frizzy","Wavy and gets frizzy in humidity","Straight but puffy, dull, hard to tame","Dry, damaged and no shine"]},
+
+ {k:"q",h:"What frustrates you most about your hair right now?",
+  opts:["Frizz the second there’s humidity","It looks dull — no shine anymore","Dry, rough, flyaways everywhere","I’ve tried a dozen products, nothing lasts"]},
+
+ {k:"reward",emo:"💧",title:"Humidity-Proofing Mini Guide",val:27,
+  head:"Smart — this is exactly what the duo is built for, {name} 💧",
+  body:"The <b>Vitamin-E leave-in</b> coats and shields each strand on damp hair, and the <b>argan + açaí serum</b> seals the cuticle so light bounces off instead of frizzing up. Together they’re the <span class=\"hl\">Seal-&-Shine Method</span>: smooth and glossy that <b>holds through humidity</b> — not a frizz-free hour that’s gone by lunch."},
+
+ {k:"q",h:"How often do you use heat on your hair (flat iron / blow dryer)?",
+  opts:["Almost every day","A few times a week","Only for special occasions","I avoid heat because it damages my hair"]},
+
+ {k:"q",h:"{name}, what have you already tried for frizz?",
+  opts:["Expensive salon smoothing / keratin","Drugstore oils and serums","Anti-frizz shampoos","Honestly, nothing really works"]},
+
+ {k:"tiles",h:"Why the Smooth Duo beats a bottle of ‘anti-frizz’",cta:"Makes sense, continue",
+  tiles:[
+   {e:"💧",t:"Seals, not just coats",p:"Most oils sit on top and grease out. The duo shields on damp hair, then seals the cuticle so frizz can’t puff back up."},
+   {e:"🪞",t:"Glass-like shine",p:"Organic argan + Brazilian açaí give that soft, glossy, ‘just left the salon’ finish — without the weight."},
+   {e:"🌧️",t:"Humidity-proof",p:"Stays smooth through rain, the gym and summer heat — the leave-in locks moisture out."},
+   {e:"🪶",t:"Weightless & non-greasy",p:"Fine hair, curls, coils — a light mist and a few drops is all it takes. No flat, no grease."},
+   {e:"🧴",t:"For all hair types",p:"Straight, wavy, curly or coily, damaged or healthy — the 2-step ritual works on every texture."},
+   {e:"⏱️",t:"60-second routine",p:"Spray, comb, a few drops on the ends, style. No booking, no half-day in a salon chair."}
+  ]},
+
+ {k:"reward",emo:"📘",title:"2-Step Ritual Playbook",val:24},
+
+ {k:"q",h:"What would ‘smooth, shiny hair that just works’ change for you?",
+  opts:["Wake up and go — no more daily fight","Feel confident in humidity, rain, the gym","Stop spending hundreds at the salon","Finally have healthy-looking, glossy hair"]},
+
+ {k:"note",emo:"🤝",h:"Don’t worry — it’s foolproof",
+  body:"No technique, no training, no risk to your hair. Step 1: mist the leave-in on damp hair and comb through. Step 2: warm 3–4 drops of serum and smooth over your mid-lengths and ends. Style as usual. That’s it.",cta:"Continue"},
+
+ {k:"reward",emo:"✨",title:"Frizz-Free Styling & Shine Guide",val:29},
+
+ {k:"q",h:"{name}, ready for salon-smooth, glossy hair without the salon price?",
+  opts:["Maybe!","Yes!","Absolutely — show me"]},
+
+ {k:"loading",h:"Building your personalized shine ritual and bonuses...",sub:"Matching the duo to your hair..."},
+
+ {k:"result"}
+];
+
+/* ================= ENGINE ================= */
+var idx=0, total=STEPS.length;
+var earned=0, name="";
+var scr=document.getElementById('screen');
+var ctawrap=document.getElementById('ctawrap'), ctaBtn=document.getElementById('ctaBtn'), cnote=document.getElementById('cnote');
+var pfill=document.getElementById('pfill'), enumEl=document.getElementById('enum'), tierEl=document.getElementById('tier');
+var TIERS=[[0,"Frizz Fighter"],[40,"Shine Seeker"],[80,"Glass Hair"]];
+
+function p(t){ return String(t||"").replace(/\{name\}/g, name||"there"); }
+function setEarn(v){ earned=v; enumEl.textContent="$"+earned; var t="Frizz Fighter"; TIERS.forEach(function(x){ if(earned>=x[0]) t=x[1]; }); tierEl.textContent=t; }
+function prog(){ pfill.style.width=Math.max(6,Math.round((idx/(total-1))*100))+"%"; }
+function showCTA(label,note,fixed){ ctawrap.style.display="block"; ctaBtn.textContent=label; cnote.innerHTML=note||"⏱️ Takes less than 3 minutes";
+  if(fixed){ ctawrap.classList.remove('inl'); document.body.classList.remove('inl-mode'); }
+  else { ctawrap.classList.add('inl'); document.body.classList.add('inl-mode'); } }
+function hideCTA(){ ctawrap.style.display="none"; ctawrap.classList.remove('inl'); document.body.classList.remove('inl-mode'); }
+function next(){ if(idx<total-1){ idx++; render(); window.scrollTo({top:0,behavior:"smooth"}); } }
+
+function render(){
+  prog();
+  var s=STEPS[idx], html="";
+
+  if(s.k==="intro"){
+    html+='<div class="eyebrow center">'+s.eyebrow+'</div>';
+    html+='<h1 class="q center" style="margin-top:6px">'+p(s.h)+'</h1>';
+    html+='<img class="hero-img" src="'+s.img+'" alt="It’s Brazilian Smooth Duo" onerror="this.style.display=\'none\'">';
+    html+='<p class="lede center">'+p(s.lede)+'</p>';
+    html+='<div class="note">'+p(s.note)+'</div>';
+    scr.innerHTML=html; showCTA(s.cta+" →","✨ Free quiz · build your ritual in 3 minutes",true); ctaBtn.onclick=next; return;
+  }
+
+  if(s.k==="form"){
+    html+='<h1 class="q">'+p(s.h)+'</h1>';
+    html+='<div class="field"><label>'+s.label+'</label><input id="nm" type="text" autocomplete="given-name" placeholder="Type your first name"></div>';
+    scr.innerHTML=html; showCTA(s.cta+" →");
+    var inp=document.getElementById('nm'); inp.focus();
+    ctaBtn.onclick=function(){ var v=inp.value.trim(); if(v){ name=v.split(/\s+/)[0]; name=name.charAt(0).toUpperCase()+name.slice(1).toLowerCase(); } next(); };
+    inp.addEventListener('keydown',function(e){ if(e.key==='Enter') ctaBtn.click(); });
+    return;
+  }
+
+  if(s.k==="q"){
+    html+='<h1 class="q">'+p(s.h)+'</h1><div class="opts">';
+    s.opts.forEach(function(o){ html+='<button class="opt"><span class="dot"></span>'+p(o)+'</button>'; });
+    html+='</div>';
+    scr.innerHTML=html; hideCTA();
+    Array.prototype.forEach.call(scr.querySelectorAll('.opt'),function(b){ b.onclick=next; });
+    return;
+  }
+
+  if(s.k==="reward"){
+    setEarn(earned + (s.val||0));
+    if(s.head){ html+='<h1 class="q">'+p(s.head)+'</h1>'; }
+    if(s.body){ html+='<p class="lede">'+p(s.body)+'</p>'; }
+    html+='<div class="reward"><span class="emo">'+s.emo+'</span><div><b>'+p(s.title)+'</b><small>+ $'+s.val+' bonus unlocked — included 🎉</small></div></div>';
+    scr.innerHTML=html; showCTA("Continue →"); ctaBtn.onclick=next; return;
+  }
+
+  if(s.k==="tiles"){
+    html+='<h1 class="q">'+p(s.h)+'</h1><div class="tiles">';
+    s.tiles.forEach(function(t){ html+='<div class="tile"><div class="te">'+t.e+'</div><b>'+t.t+'</b><p>'+t.p+'</p></div>'; });
+    html+='</div>';
+    scr.innerHTML=html; showCTA(s.cta+" →",null,true); ctaBtn.onclick=next; return;
+  }
+
+  if(s.k==="note"){
+    html+='<div class="reward" style="background:#fdf3e2;border-color:#ecd3a6"><span class="emo">'+s.emo+'</span><div><b>'+p(s.h)+'</b></div></div>';
+    html+='<p class="lede">'+p(s.body)+'</p>';
+    scr.innerHTML=html; showCTA(s.cta+" →"); ctaBtn.onclick=next; return;
+  }
+
+  if(s.k==="loading"){
+    html+='<div class="load"><div class="spin"></div><h1 class="q center">'+p(s.h)+'</h1><div class="loadbar"><i></i></div><p class="sub center" style="margin-top:14px">'+s.sub+'</p></div>';
+    scr.innerHTML=html; hideCTA();
+    setTimeout(next,3300); return;
+  }
+
+  if(s.k==="result"){
+    html+='<div class="center"><div class="eyebrow">🎉 Your ritual is ready, '+(name||"there")+'</div>';
+    html+='<h1 class="q" style="margin-top:6px">From today, '+(name||"there")+', you get <span class="hlg">frizz-free, glass-shine hair</span> — humidity-proof, in 60 seconds, for the price of one salon visit you’ll never need again.</h1></div>';
+    html+='<p class="lede center" style="font-size:15.5px">No more fighting frizz by 9am. No more dull, dry, rough ends. The <b>It’s Brazilian Smooth Duo</b> gives you the two things salons charge hundreds for — a <b>sealing leave-in</b> and a <b>glossing argan + açaí serum</b> — bottled for home, for every hair type.</p>';
+    html+='<div class="offerline"><div class="eyebrow" style="margin-bottom:6px">The 2-Step Smooth Ritual™</div><div class="ol-top">The <b>Vitamin-E Leave-In Spray</b> + the <b>Argan & Açaí Shine Serum</b> + <b>$'+earned+' in bonuses</b> for just</div><div class="ol-price">$'+PRICE+'</div><div class="ol-sub" style="color:var(--green);font-size:14px">Both bottles, shipped free — vs <b>$'+SALON+'+</b> for one salon smoothing.</div><div class="ol-sub">One-time · free US shipping · 60-day happiness guarantee</div></div>';
+    html+='<img class="hero-img" loading="lazy" src="before-after.webp" alt="Smooth Duo before and after" onerror="this.style.display=\'none\'">';
+    /* real selfies */
+    html+='<div class="center" style="margin-top:22px"><div class="eyebrow">Real women · no filters · one wash</div><h1 class="q" style="font-size:22px;margin-top:4px">Frizzy & dull → smooth & glossy</h1></div>';
+    html+='<img class="hero-img" loading="lazy" src="ba1.webp" alt="Real customer before and after" onerror="this.style.display=\'none\'">';
+    html+='<img class="hero-img" loading="lazy" src="ba2.webp" alt="Real customer before and after" onerror="this.style.display=\'none\'" style="margin-top:10px">';
+    html+='<p class="sub center" style="margin-top:8px">Same hair, same day — frizzy and dull, then smooth and glass-shiny. Done at home, in 60 seconds.</p>';
+    /* what you get */
+    html+='<div class="center" style="margin-top:22px"><div class="eyebrow">What you get</div><h1 class="q" style="font-size:22px;margin-top:4px">Two real bottles — the full ritual</h1></div>';
+    html+='<img class="hero-img" loading="lazy" src="duo-box.webp" alt="It’s Brazilian Smooth Duo — both bottles" onerror="this.src=\'https://cdn.shopify.com/s/files/1/0992/9687/0689/files/product_bottle.jpg?v=1784574647\'">';
+    html+='<div class="gifts"><h3>🧴 Your Smooth Duo — both full-size bottles</h3>'+
+      gline("💨","Step 1 — Vitamin-E Protectant Leave-In Spray · 8 fl oz","The weightless mist you spray on damp hair. Heat-protects, detangles, smooths frizz and locks humidity out before you even style.","$39")+
+      gline("💧","Step 2 — Argan & Açaí Anti-Frizz Shine Serum · 1.7 fl oz","A few drops of organic argan oil + Brazilian açaí on mid-lengths and ends for soft, glossy, non-greasy shine that lasts all day.","$49")+
+      '</div>';
+    /* how it works */
+    html+='<div class="center" style="margin-top:22px"><div class="eyebrow">How it works</div><h1 class="q" style="font-size:22px;margin-top:4px">Two moves. 60 seconds.</h1></div>';
+    html+='<img class="hero-img" loading="lazy" src="ritual.webp" alt="The 2-step ritual" onerror="this.style.display=\'none\'">';
+    html+='<div class="steps" style="margin-top:14px">'+
+      '<div class="step"><span class="n">1</span><div><b>Spray the leave-in on damp hair</b><p>Mist from mid-length to ends, comb through. It shields, detangles and preps every strand.</p></div></div>'+
+      '<div class="step"><span class="n">2</span><div><b>Smooth in a few drops of serum</b><p>Warm 3–4 drops in your palms and glide over mid-lengths and ends to seal frizz and bring the shine.</p></div></div>'+
+      '<div class="step"><span class="n">3</span><div><b>Style as usual</b><p>Air-dry, blow-dry or iron — it’s protected and glossy either way, and it holds through humidity.</p></div></div>'+
+      '</div>';
+    /* ingredients */
+    html+='<div class="center" style="margin-top:22px"><div class="eyebrow">What’s inside</div><h1 class="q" style="font-size:22px;margin-top:4px">Argan, açaí & Vitamin E</h1></div>';
+    html+='<img class="hero-img" loading="lazy" src="ingredients.webp" alt="Argan oil, açaí and Vitamin E" onerror="this.style.display=\'none\'">';
+    html+='<div class="steps" style="margin-top:14px">'+
+      '<div class="step"><span class="n">✓</span><div><b>Organic argan oil</b><p>The “liquid gold” that smooths and adds weightless shine without greasing hair down.</p></div></div>'+
+      '<div class="step"><span class="n">✓</span><div><b>Brazilian açaí extract</b><p>Antioxidant-rich fruit extract that conditions dry mid-lengths and ends.</p></div></div>'+
+      '<div class="step"><span class="n">✓</span><div><b>Vitamin E + soybean oil</b><p>Shields against heat and humidity so your smoothing actually lasts.</p></div></div>'+
+      '</div>';
+    /* reviews */
+    html+='<div class="center" style="margin-top:24px"><div class="eyebrow">★★★★★ Real buyers · verified</div><h1 class="q" style="font-size:22px;margin-top:4px">What women are saying</h1></div>';
+    html+=rvw("D","Daniela","Frizz is just… gone.","I live in Florida and my hair used to puff up the second I walked outside. I spray the leave-in, smooth a few drops of the serum, and it stays sleek all day. It doesn’t feel greasy at all.");
+    html+=rvw("M","Megan","The shine is unreal for how light it is.","I have fine hair so I’m scared of oils, but 3 drops is perfect — glossy, not flat, not greasy. My hair looks like I just left the salon and I did it in a minute.");
+    html+=rvw("K","Kiara","Finally something that works on curls.","My curls are dry and frizzy and most serums weigh them down. This duo defined them and killed the frizz without making them stringy. Obsessed.");
+    html+=rvw("R","Renata","Smoother than my $250 gloss treatment.","I used to book a salon gloss every couple months. This gives me the same glass shine at home for a fraction of the price. Not going back.");
+    html+='<p class="sub center" style="margin-top:8px">Real verified reviews from buyers of the It’s Brazilian hair line.</p>';
+    /* bonuses */
+    html+='<div class="center" style="margin-top:20px"><div class="eyebrow">And you also get</div><h1 class="q" style="font-size:22px;margin-top:4px">$'+earned+' in free bonuses with your duo</h1></div>';
+    html+='<div class="gifts"><h3>Included today, '+(name||"you")+'</h3>'+
+      gline("📘","2-Step Ritual Playbook","Kills “I’ll use it wrong.” Exactly how much to use for your hair type so you nail the salon finish on day one.","$24")+
+      gline("💧","Humidity-Proofing Mini Guide","Kills “it won’t survive the weather.” How to stay sleek and glossy through rain, the gym and summer heat.","$27")+
+      gline("✨","Frizz-Free Styling & Shine Guide","Kills “it’ll fall flat by noon.” The styling routine that stretches the shine all day, every day.","$29")+
+      gline("🎁","Your Personalized Shine Plan","Kills “will it work on MY hair?” A routine matched to your exact hair type from this quiz.","$19")+
+      '<div class="gline totalv"><span class="ge">🧾</span><div><b>Total value</b><p>Both bottles + bonuses, if bought separately</p></div><span class="gv totalp">$'+PRICE_FROM+'</span></div>'+
+      '</div>';
+    html+='<div class="note" style="margin-top:16px;background:#fdf3e2;border:1.5px solid #ecd3a6"><b>Do the math:</b> one salon smoothing or gloss runs <b>$'+SALON+'+</b> and fades in weeks. The Smooth Duo is <b>two full-size bottles</b> of your everyday ritual — dozens of uses — for <b>$'+PRICE+'</b>, one time.</div>';
+    html+='<div class="note" style="margin-top:10px;background:#231509;border:none;color:#fff"><b>You won’t find this anywhere else.</b> Both bottles, the $'+earned+' in guides, free shipping and the 60-day guarantee only come together right here — not on any marketplace, not in any salon.</div>';
+    html+='<div class="pricebox"><div class="from">Total value $'+PRICE_FROM+'</div><div class="now">$'+PRICE+'</div><div class="once">One-time · both bottles · free US shipping · no subscription</div></div>';
+    /* kit selector */
+    var k2=(parseFloat(PRICE)*2*(1-KIT2_OFF)); var k2s=k2.toFixed(2); var k2per=(k2/2).toFixed(2); var k2save=(parseFloat(PRICE)*2-k2).toFixed(2);
+    html+='<div class="center" style="margin-top:18px"><div class="eyebrow">Choose your supply</div><h1 class="q" style="font-size:20px;margin-top:2px">How many duos, '+(name||"")+'?</h1></div>';
+    html+='<div class="kitsel">'+
+      '<div class="kitopt sel" data-kit="1"><div class="kt">1 Duo</div><div class="kp">$'+PRICE+'</div><div class="ks">Both bottles<br>your everyday ritual</div></div>'+
+      '<div class="kitopt" data-kit="2"><div class="ktag">BEST VALUE · SAVE $'+k2save+'</div><div class="kt">2 Duos</div><div class="kp">$'+k2s+'</div><div class="ks">1 to keep, 1 to gift<br>$'+k2per+' each</div></div>'+
+      '</div>';
+    html+='<p class="sub center" style="margin-top:8px">Most women grab 2 — one for themselves and one to gift — and the 2nd is 15% off.</p>';
+    /* guarantee */
+    html+='<div class="guar"><div style="font-size:34px;flex:none">🛡️</div><div><b>60-Day "Smooth or It’s Free" Guarantee</b><p>Use the duo. If your hair isn’t visibly smoother and shinier within 60 days, email us for a full refund — and keep the bonus guides. The risk is all on us.</p></div></div>';
+    html+='<div class="sealrow"><span class="seal">🔒 Secure checkout</span><span class="seal">🚚 Free US shipping</span><span class="seal">↩️ 60-day guarantee</span><span class="seal">🌿 Paraben-free</span></div>';
+    /* certifications */
+    html+='<div class="center" style="margin-top:22px"><div class="eyebrow">Made to professional standards</div><h1 class="q" style="font-size:22px;margin-top:4px">Our standards</h1></div>';
+    html+='<div class="sealrow" style="gap:10px">'+
+      '<span class="seal">🇺🇸 Made in USA</span>'+
+      '<span class="seal">🌿 Paraben-free</span>'+
+      '<span class="seal">🧴 For all hair types</span>'+
+      '<span class="seal">🐰 Not tested on animals</span>'+
+      '</div>';
+    /* FAQ */
+    html+='<div class="center" style="margin-top:22px"><div class="eyebrow">Still deciding?</div><h1 class="q" style="font-size:22px;margin-top:4px">Questions people ask</h1></div>';
+    html+='<div class="faq">'+
+      faq("Will it make my hair greasy or flat?","No. The leave-in is a weightless mist and the serum is just 3–4 drops on your ends. Start light — especially on fine hair — and build up. It’s designed to be non-greasy on every hair type.")+
+      faq("What hair types is it for?","All of them — straight, wavy, curly, coily, fine or coarse, damaged or healthy. The amount you use is the only thing that changes, and the playbook walks you through it.")+
+      faq("How long do the bottles last?","The 8 oz leave-in and the 1.7 oz serum give you dozens of applications — months of your everyday ritual, depending on hair length and how often you use them.")+
+      faq("Is this a keratin treatment?","No — and that’s the point. No formaldehyde, no fumes, no 3-hour process. It’s a gentle daily leave-in + serum that seals frizz and adds shine every time you style.")+
+      faq("Does the shine last through humidity?","Yes. The leave-in locks moisture out and the serum seals the cuticle, so it holds through rain, the gym and summer heat far better than a plain oil.")+
+      faq("What’s your guarantee?","60 days. Use it — if your hair isn’t smoother and shinier, email us and we’ll refund you, and you keep the bonus guides.")+
+      '</div>';
+    /* Amanda close */
+    html+='<div class="note" style="margin-top:22px;background:#231509;border:none;color:#fff;padding:18px">'+
+      '<div style="font-family:Archivo;font-weight:900;font-size:20px;line-height:1.2;margin-bottom:8px">Here’s the truth '+(name||"")+', in black and white:</div>'+
+      '<p style="margin:0 0 8px;color:#f0e2cd">Every morning you wait, frizz wins by 9am and your hair looks duller than it is — while the salon quietly charges you <b style="color:#fff">$'+SALON+'+</b> for shine you can get at your own sink in 60 seconds.</p>'+
+      '<p style="margin:0 0 8px;color:#f0e2cd">For <b style="color:#fff">$'+PRICE+' one time</b> you get <b style="color:#fff">both bottles</b> — the sealing leave-in and the argan + açaí shine serum — plus <b style="color:#fff">$'+earned+' in guides</b>, shipped free.</p>'+
+      '<p style="margin:0;color:#f0e2cd">And if your hair isn’t visibly smoother and glossier, you pay <b style="color:#fff">nothing</b> — 60 days, full refund, keep the guides. The only way to lose is to close this page and fight your hair again tomorrow.</p>'+
+      '</div>';
+    html+='<p class="sub center" style="margin-top:16px">Tap the button, check out securely, and your duo ships free — with your bonus guides sent to your email.</p>';
+    html+='<div class="disc"><b>Safety:</b> For external use only. Avoid contact with eyes; if contact occurs, rinse with water. Discontinue use if irritation occurs. Keep out of reach of children. Always read labels, warnings and directions before use. This is a cosmetic hair product and is not intended to diagnose, treat, cure or prevent any condition. Crossed-out prices and bonus values are illustrative of value, not separate charges.</div>';
+    html+='<div class="pagefoot"><svg class="logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="It’s Brazilian"><defs><radialGradient id="ibgf" cx="50%" cy="8%" r="95%"><stop offset="0%" stop-color="#ffd21a"/><stop offset="50%" stop-color="#ff9a1e"/><stop offset="100%" stop-color="#ff5a1e"/></radialGradient></defs><circle cx="50" cy="50" r="50" fill="url(#ibgf)"/><text x="50" y="43" text-anchor="middle" font-family="Pacifico, cursive" font-size="21" fill="#fff">It’s</text><text x="50" y="70" text-anchor="middle" font-family="Pacifico, cursive" font-size="19" fill="#fff">Brazilian</text></svg><div class="fb">It’s Brazilian · Smooth Duo</div><div class="fine">© It’s Brazilian · Made in the USA · All rights reserved.</div></div>';
+    scr.innerHTML=html;
+    showCTA("Get my duo for $"+PRICE+" →","🔒 Secure checkout · free US shipping",true);
+    cnote.innerHTML="🔒 Secure checkout · free US shipping";
+    var u=document.createElement('div'); u.className='urg'; u.textContent='⏳ Launch price $'+PRICE+' — this round only. It goes back up after.'; cnote.parentNode.insertBefore(u,cnote.nextSibling);
+    window.__kit=1;
+    function kitPrice(){ return (window.__kit===2)? (parseFloat(PRICE)*2*(1-KIT2_OFF)) : parseFloat(PRICE); }
+    function syncCTA(){ var base=kitPrice(); ctaBtn.textContent = (window.__kit===2? "Get 2 duos for $"+base.toFixed(2) : "Get my duo for $"+PRICE)+" →"; }
+    Array.prototype.forEach.call(scr.querySelectorAll('.kitopt'),function(o){
+      o.onclick=function(){
+        Array.prototype.forEach.call(scr.querySelectorAll('.kitopt'),function(x){x.classList.remove('sel');});
+        o.classList.add('sel'); window.__kit=parseInt(o.getAttribute('data-kit'),10)||1; syncCTA();
+      };
+    });
+    ctaBtn.onclick=function(){
+      var two=window.__kit===2; var qty=two?2:1;
+      var val=kitPrice();
+      try{ if(window.fbq) fbq('track','InitiateCheckout',{value:val,currency:'USD'}); }catch(e){}
+      var items=MAIN_VARIANT+":"+qty;
+      var url=CART_BASE+items;
+      var qs=[]; if(two){ qs.push('discount='+KIT2_CODE); }
+      try{ var rtk=window.__rtkcid||''; if(rtk){ qs.push('attributes[rtkcid]='+encodeURIComponent(rtk)); } }catch(e){}
+      qs.push('attributes[lp]=duo'); if(location.search){ qs.push(location.search.slice(1)); }
+      if(qs.length){ url+='?'+qs.join('&'); }
+      location.href=url;
+    };
+    return;
+  }
+}
+function gline(e,t,p,v){ return '<div class="gline"><span class="ge">'+e+'</span><div><b>'+t+'</b><p>'+p+'</p></div>'+(v?'<span class="gv">'+v+'</span>':'')+'</div>'; }
+function faq(q,a){ return '<details><summary>'+q+'</summary><p>'+a+'</p></details>'; }
+function rvw(ini,name,title,body){ return '<div class="rvw"><div class="rtop"><div class="av">'+ini+'</div><div><div class="nm">'+name+'</div><div class="stars">★★★★★</div></div></div><div class="rt">'+title+'</div><div class="rb">'+body+'</div><span class="vp">✔ Verified buyer</span><div class="src">United States</div></div>'; }
+
+setEarn(0); render();
+</script>
+</body>
+</html>
