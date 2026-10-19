@@ -198,12 +198,13 @@ var MAIN_VARIANT = "53980926542113";
 var KIT2_CODE    = "SMOOTHDUO2";
 var KIT2_OFF     = 0.15;
 var PRICE        = "49.99";
-var PRICE_FROM   = "148"; // stacked value anchor (leave-in $39 + serum $49 + $60 bonuses)
+var PRICE_FROM   = "187"; // stacked value anchor (leave-in $39 + serum $49 + $99 bonuses)
 var SALON        = "300"; // typical US salon smoothing/gloss price (anchor)
+var SALON_YEAR   = "900"; // a few gloss/smoothing visits a year (anchor)
 
 /* ================= QUIZ DATA ================= */
 var STEPS = [
- {k:"intro",eyebrow:"It’s Brazilian · The 2-Step Smooth Ritual",
+ {k:"intro",eyebrow:"It’s Brazilian · The 60-Second Glass-Hair Ritual™",
   h:'The Brazilian 2-step ritual for <span class="hlg">frizz-free, glass-shine hair</span> — <span class="hlg">humidity-proof</span>, for every hair type, <span class="hlr">without a $300 salon visit</span>.',
   img:"duo-hero.webp",
   lede:'Here’s what no salon tells you: frizz isn’t your hair misbehaving — it’s hair that was never <b>sealed</b>. The <b>It’s Brazilian Smooth Duo</b> does it in two moves: a weightless <b>Vitamin-E leave-in</b> that shields and smooths on damp hair, then a few drops of <b>organic argan + Brazilian açaí serum</b> that lock in a soft, glossy, non-greasy finish. Salon shine, at your bathroom sink — in under 60 seconds. Answer a few quick questions and build your personalized ritual — and unlock the bonuses that come with your duo.',
@@ -337,7 +338,7 @@ function render(){
     html+='<div class="center"><div class="eyebrow">🎉 Your ritual is ready, '+(name||"there")+'</div>';
     html+='<h1 class="q" style="margin-top:6px">From today, '+(name||"there")+', you get <span class="hlg">frizz-free, glass-shine hair</span> — humidity-proof, in 60 seconds, for the price of one salon visit you’ll never need again.</h1></div>';
     html+='<p class="lede center" style="font-size:15.5px">No more fighting frizz by 9am. No more dull, dry, rough ends. The <b>It’s Brazilian Smooth Duo</b> gives you the two things salons charge hundreds for — a <b>sealing leave-in</b> and a <b>glossing argan + açaí serum</b> — bottled for home, for every hair type.</p>';
-    html+='<div class="offerline"><div class="eyebrow" style="margin-bottom:6px">The 2-Step Smooth Ritual™</div><div class="ol-top">The <b>Vitamin-E Leave-In Spray</b> + the <b>Argan & Açaí Shine Serum</b> + <b>$'+earned+' in bonuses</b> for just</div><div class="ol-price">$'+PRICE+'</div><div class="ol-sub" style="color:var(--green);font-size:14px">Both bottles, shipped free — vs <b>$'+SALON+'+</b> for one salon smoothing.</div><div class="ol-sub">One-time · free US shipping · 60-day happiness guarantee</div></div>';
+    html+='<div class="offerline"><div class="eyebrow" style="margin-bottom:6px">The 60-Second Glass-Hair Ritual™</div><div class="ol-top">The <b>Vitamin-E Leave-In Spray</b> + the <b>Argan & Açaí Shine Serum</b> + <b>$'+earned+' in bonuses</b> for just</div><div class="ol-price">$'+PRICE+'</div><div class="ol-sub" style="color:var(--green);font-size:14px">Both bottles, shipped free — vs <b>$'+SALON+'+</b> for one salon smoothing.</div><div class="ol-sub">One-time · free US shipping · 60-day happiness guarantee</div></div>';
     html+='<img class="hero-img" loading="lazy" src="before-after.webp" alt="Smooth Duo before and after" onerror="this.style.display=\'none\'">';
     /* real selfies */
     html+='<div class="center" style="margin-top:22px"><div class="eyebrow">Frizzy & dull → smooth & glossy</div><h1 class="q" style="font-size:22px;margin-top:4px">See it hold — all day, every condition</h1></div>';
@@ -395,7 +396,7 @@ function render(){
       gline("🎁","Your Personalized Shine Plan","Kills “will it work on MY hair?” A routine matched to your exact hair type from this quiz.","$19")+
       '<div class="gline totalv"><span class="ge">🧾</span><div><b>Total value</b><p>Both bottles + bonuses, if bought separately</p></div><span class="gv totalp">$'+PRICE_FROM+'</span></div>'+
       '</div>';
-    html+='<div class="note" style="margin-top:16px;background:#fdf3e2;border:1.5px solid #ecd3a6"><b>Do the math:</b> one salon smoothing or gloss runs <b>$'+SALON+'+</b> and fades in weeks. The Smooth Duo is <b>two full-size bottles</b> of your everyday ritual — dozens of uses — for <b>$'+PRICE+'</b>, one time.</div>';
+    html+='<div class="note" style="margin-top:16px;background:#fdf3e2;border:1.5px solid #ecd3a6"><b>Do the math:</b> one salon gloss/smoothing runs <b>$'+SALON+'+</b> and fades in weeks — so a few a year is <b>$'+SALON_YEAR+'+</b>. The Smooth Duo is <b>two full-size bottles</b> of your everyday ritual — dozens of uses, months of smooth — for <b>$'+PRICE+'</b>, one time. That’s the difference between <b>$'+SALON_YEAR+'+ a year</b> and <b>$'+PRICE+' once</b>.</div>';
     html+='<div class="note" style="margin-top:10px;background:#231509;border:none;color:#fff"><b>You won’t find this anywhere else.</b> Both bottles, the $'+earned+' in guides, free shipping and the 60-day guarantee only come together right here — not on any marketplace, not in any salon.</div>';
     html+='<div class="pricebox"><div class="from">Total value $'+PRICE_FROM+'</div><div class="now">$'+PRICE+'</div><div class="once">One-time · both bottles · free US shipping · no subscription</div></div>';
     /* kit selector */
@@ -407,7 +408,7 @@ function render(){
       '</div>';
     html+='<p class="sub center" style="margin-top:8px">Most women grab 2 — one for themselves and one to gift — and the 2nd is 15% off.</p>';
     /* guarantee */
-    html+='<div class="guar"><div style="font-size:34px;flex:none">🛡️</div><div><b>60-Day "Smooth or It’s Free" Guarantee</b><p>Use the duo. If your hair isn’t visibly smoother and shinier within 60 days, email us for a full refund — and keep the bonus guides. The risk is all on us.</p></div></div>';
+    html+='<div class="guar"><div style="font-size:34px;flex:none">🛡️</div><div><b>60-Day "Glass-Hair or It’s Free" Guarantee</b><p>Do the 60-second ritual once. If your hair isn’t visibly smoother and shinier <b>from the very first use</b> — any time in 60 days — email us for a <b>full refund, and keep all the bonus guides</b>. You either get glass-hair or you don’t pay. The risk is 100% on us.</p></div></div>';
     html+='<div class="sealrow"><span class="seal">🔒 Secure checkout</span><span class="seal">🚚 Free US shipping</span><span class="seal">↩️ 60-day guarantee</span><span class="seal">🌿 Paraben-free</span></div>';
     /* certifications */
     html+='<div class="center" style="margin-top:22px"><div class="eyebrow">Made to professional standards</div><h1 class="q" style="font-size:22px;margin-top:4px">Our standards</h1></div>';
