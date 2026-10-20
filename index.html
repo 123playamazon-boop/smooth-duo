@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- smooth-duo quiz v4 — accusatory hero + coating-trap why + anchor math -->
+<!-- smooth-duo quiz v5 - CRO: shipbar+hero dead-clicks now advance -->
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -503,6 +503,22 @@ function faq(q,a){ return '<details><summary>'+q+'</summary><p>'+a+'</p></detail
 function rvw(ini,name,title,body){ return '<div class="rvw"><div class="rtop"><div class="av">'+ini+'</div><div><div class="nm">'+name+'</div><div class="stars">★★★★★</div></div></div><div class="rt">'+title+'</div><div class="rb">'+body+'</div><span class="vp">✔ Verified buyer</span><div class="src">United States</div></div>'; }
 
 setEarn(0); render();
+
+/* ===== CRO: stop the top shipping bar + intro hero/headline from eating taps =====
+   Clarity showed ~94% of taps landing on the orange FREE-SHIPPING bar (dead clicks)
+   and only 13 taps reaching the quiz "Continue". Now a tap on the bar, the hero image,
+   the headline or the eyebrow advances the quiz via the current CTA when it's visible. */
+(function(){
+  function advance(){ if(ctawrap.style.display!=='none'){ ctaBtn.click(); } }
+  var sb=document.querySelector('.shipbar');
+  if(sb){ sb.style.cursor='pointer'; sb.addEventListener('click',advance); }
+  scr.addEventListener('click',function(e){
+    var s=STEPS[idx]; if(!s||s.k!=='intro') return;
+    var t=e.target;
+    if(t.closest('.cta')||t.closest('.opt')||t.closest('input')||t.closest('a')||t.closest('button')) return;
+    if(t.closest('.hero-img')||t.closest('h1.q')||t.closest('.eyebrow')){ advance(); }
+  });
+})();
 </script>
 </body>
 </html>

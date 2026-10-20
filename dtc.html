@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- smooth-duo dtc v4 — accusatory hero + coating-trap why + anchor math -->
+<!-- smooth-duo dtc v5 - CRO: shipbar+hero dead-clicks scroll to offer -->
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -292,7 +292,7 @@ h+='<div class="note" style="margin-top:16px;background:#fff2e4;border:1.5px sol
 h+='<div class="note" style="margin-top:10px;background:#231509;border:none;color:#fff"><b>You won’t find this anywhere else.</b> Both bottles, the $'+BONUSES+' in guides, free shipping and the 60-day guarantee only come together right here — not on any marketplace, not in any salon.</div>';
 
 /* ---- price + kit selector ---- */
-h+='<div class="pricebox"><div class="from">Total value $'+PRICE_FROM+'</div><div class="now">$'+PRICE+'</div><div class="once">One-time · both bottles · <b style="color:var(--green)">🚚 FREE US SHIPPING</b> · no subscription</div></div>';
+h+='<div class="pricebox" id="offer"><div class="from">Total value $'+PRICE_FROM+'</div><div class="now">$'+PRICE+'</div><div class="once">One-time · both bottles · <b style="color:var(--green)">🚚 FREE US SHIPPING</b> · no subscription</div></div>';
 var k2=(parseFloat(PRICE)*2*(1-KIT2_OFF)); var k2s=k2.toFixed(2); var k2per=(k2/2).toFixed(2); var k2save=(parseFloat(PRICE)*2-k2).toFixed(2);
 h+='<div class="center" style="margin-top:18px"><div class="eyebrow">Choose your supply</div><h1 class="q" style="font-size:20px;margin-top:2px">How many duos?</h1></div>';
 h+='<div class="kitsel">'+
@@ -366,6 +366,18 @@ ctaBtn.onclick=goCheckout;
 cnote.innerHTML="🔒 Secure checkout · free US shipping";
 var u=document.createElement('div'); u.className='urg'; u.textContent='⏳ Launch price $'+PRICE+' — this round only. It goes back up after.'; cnote.parentNode.insertBefore(u,cnote.nextSibling);
 syncCTA();
+
+/* ===== CRO: stop the top shipping bar + hero/headline from eating taps =====
+   Clarity showed the orange FREE-SHIPPING bar + hero image + headline absorbing the
+   taps and doing nothing. Now tapping any of them jumps the visitor straight to the
+   offer block (price + kit + guarantee) where the decision is made. */
+(function(){
+  function toOffer(){ var el=document.getElementById('offer'); if(el){ el.scrollIntoView({behavior:'smooth',block:'start'}); } }
+  var sb=document.querySelector('.shipbar');
+  if(sb){ sb.style.cursor='pointer'; sb.addEventListener('click',toOffer); }
+  var firstH1=scr.querySelector('h1.q'), heroImg=scr.querySelector('.hero-img'), firstEb=scr.querySelector('.eyebrow');
+  [firstH1,heroImg,firstEb].forEach(function(el){ if(el){ el.style.cursor='pointer'; el.addEventListener('click',toOffer); } });
+})();
 </script>
 </body>
 </html>
