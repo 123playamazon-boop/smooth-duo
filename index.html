@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- smooth-duo quiz v3 — aggressive hero + comparison block -->
+<!-- smooth-duo quiz v4 — accusatory hero + coating-trap why + anchor math -->
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -230,7 +230,7 @@ var STEPS = [
  {k:"intro",eyebrow:"It’s Brazilian · The 2-Step Seal-&amp;-Shine Ritual™",
   h:'Glass-smooth, <span class="hlg">frizz-free hair</span> in 60 seconds — <span class="hlr">without the $300 salon chair.</span>',
   img:"duo-hero.webp",
-  lede:'Here’s what no salon will tell you: frizz isn’t bad hair — it’s hair that was never <b>sealed</b>. Those $12 drugstore “anti-frizz” serums just <b>coat</b> the strand and grease out by noon — <b>the coating trap</b>. The <b>Smooth Duo</b> actually <b>seals</b> it in two moves — leave-in + argan &amp; açaí Magic Oil — for glass shine that holds <b>all day. Even on curls. Even in humidity.</b> Answer a few quick questions to build your ritual and unlock the bonuses.',
+  lede:'You’ve rinsed <b>$300 salon smoothing</b> down the drain in 3 washes — and the <b>$12 “anti-frizz”</b> in your cabinet is lying to you. Here’s what no salon will tell you: frizz isn’t bad hair — it’s hair that was never <b>sealed</b>. Those drugstore serums just <b>coat</b> the strand and grease out by noon — because coating is cheap to make and looks shiny for the 2 seconds you test it in the aisle. That’s <b>the coating trap</b>. The <b>Smooth Duo</b> actually <b>seals</b> the cuticle in two moves — leave-in + argan &amp; açaí Magic Oil — for glass shine that holds <b>all day. Even on curls. Even in humidity.</b> Answer a few quick questions to build your ritual and unlock the bonuses.',
   note:"Takes under 3 minutes — each answer unlocks a free bonus guide that comes with your duo.",
   cta:"Build my ritual"},
 
@@ -369,7 +369,8 @@ function render(){
      '<div style="background:#fff;border:1px solid #eadfce;border-radius:12px;padding:12px 14px"><b style="color:#d62828;font-size:14.5px">✗ Flat-ironing it down every morning</b><p style="font-size:13px;color:#45533a;margin-top:3px">Holds till the first humid breeze — and the daily heat is what fried your ends in the first place.</p></div>'+
      '<div style="background:#f0f8e8;border:2px solid #bfe0a8;border-radius:12px;padding:12px 14px"><b style="color:#157347;font-size:14.5px">✓ Your 2-Step Seal-&amp;-Shine Ritual</b><p style="font-size:13px;color:#2f5120;margin-top:3px">Actually <b>seals</b> the cuticle — leave-in shields, Magic Oil locks it in. Glass shine all day, every hair type, 60 seconds — for a fraction of one salon visit.</p></div>'+
      '</div>';
-    html+='<div class="offerline" style="margin-top:22px"><div class="eyebrow" style="margin-bottom:6px">The 2-Step Seal-&amp;-Shine Ritual™</div><div class="ol-top">The <b>Vitamin-E Leave-In Spray</b> + the <b>Argan & Açaí Magic Oil</b> + <b>$'+earned+' in bonuses</b> for just</div><div class="ol-price">$'+PRICE+'</div><div class="ol-sub" style="color:var(--green);font-size:14px">Both bottles, shipped free — vs <b>$'+SALON+'+</b> for one salon smoothing that fades in weeks.</div><div class="ol-sub">One-time · free US shipping · 60-day happiness guarantee</div></div>';
+    html+='<div style="margin-top:22px;text-align:center;background:#231509;color:#fff;border-radius:16px;padding:18px 16px"><div style="font-size:13px;font-weight:800;letter-spacing:.5px;color:#ffcf99;text-transform:uppercase">Do the math</div><div style="font-size:17px;font-weight:800;margin-top:6px;line-height:1.35">The salon: <span style="text-decoration:line-through;color:#ffb27a">$'+SALON+'+ a visit</span>, a few a year = <span style="color:#ff8a4a">$'+SALON_YEAR+'+/yr</span> — and it fades in weeks.<br>Your Smooth Duo: <b style="color:#9fe36a">$'+PRICE+' once</b>, months of glass-hair.</div><div style="font-size:13px;color:#d9c9b3;margin-top:8px;font-weight:600">That’s the difference between $'+SALON_YEAR+'+ every year and $'+PRICE+' one time.</div></div>';
+    html+='<div class="offerline" style="margin-top:16px"><div class="eyebrow" style="margin-bottom:6px">The 2-Step Seal-&amp;-Shine Ritual™</div><div class="ol-top">The <b>Vitamin-E Leave-In Spray</b> + the <b>Argan & Açaí Magic Oil</b> + <b>$'+earned+' in bonuses</b> for just</div><div class="ol-price">$'+PRICE+'</div><div class="ol-sub" style="color:var(--green);font-size:14px">Both bottles, shipped free — vs <b>$'+SALON+'+</b> for one salon smoothing that fades in weeks.</div><div class="ol-sub">One-time · free US shipping · 60-day happiness guarantee</div></div>';
     html+='<img class="hero-img" loading="lazy" src="before-after.webp" alt="Smooth Duo before and after" onerror="this.style.display=\'none\'">';
     /* real selfies */
     html+='<div class="center" style="margin-top:22px"><div class="eyebrow">Frizzy & dull → smooth & glossy</div><h1 class="q" style="font-size:22px;margin-top:4px">See it hold — all day, every condition</h1></div>';
